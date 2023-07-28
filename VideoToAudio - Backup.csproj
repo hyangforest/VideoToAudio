@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>audio.ico</ApplicationIcon>
+	<AssemblyName>YourAssemblyName</AssemblyName>
+    <Description>Your assembly description.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="audio.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="audio.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="2.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="audio.png" />
+  </ItemGroup>
+
+</Project>
