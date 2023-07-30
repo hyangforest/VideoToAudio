@@ -35,7 +35,7 @@
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="{x:Type Button}">
-                                <Border CornerRadius="5" Background="#FFF2BE80" BorderBrush="{TemplateBinding BorderBrush}">
+                                <Border x:Name="borderBtnFindVideo" CornerRadius="5" Background="#FFF2BE80" BorderBrush="{TemplateBinding BorderBrush}">
                                     <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" ContentTemplate="{TemplateBinding ContentTemplate}" />
                                 </Border>
                             </ControlTemplate>
