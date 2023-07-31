@@ -151,7 +151,7 @@ namespace VideoToAudio
                    
                     string directoryPath = string.Format("{0}audio\\downloads", cbDrive.SelectedValue.ToString());  // 디렉터리 경로
                     string videoFileName = videoFilePath.Split('\\')[videoFilePath.Split('\\').Length - 1].Split('.')[0]; // 비디오 파일명
-                    string outputAudioFilePath = string.Format("{0}\\audio\\downloads\\{1}_audio_{2}.mp3", cbDrive.SelectedValue, videoFileName, DateTime.Now.ToString("yyyyMMddHHmmss")); // .mp3 파일 경로
+                    string outputAudioFilePath = string.Format("{0}audio\\downloads\\{1}_audio_{2}.mp3", cbDrive.SelectedValue, videoFileName, DateTime.Now.ToString("yyyyMMddHHmmss")); // .mp3 파일 경로
 
 
                     // 디렉터리 존재 여부
@@ -164,7 +164,16 @@ namespace VideoToAudio
                         
                     if (ExtractAudioFromVideo(videoFilePath, outputAudioFilePath))
                     {
-                        MessageBox.Show("파일 변환이 완료되었습니다.", "Audio 파일 변환하기");
+                        //MessageBoxResult result = MessageBox.Show("파일 변환이 완료되었습니다.", "Audio 파일 변환하기", MessageBoxButton.OKCancel);
+
+                        //if (result == MessageBoxResult.OK) 
+                        //{
+                        //    Clipboard.SetText(directoryPath);
+                        //    MessageBox.Show(string.Format("저장 경로는 {0}입니다.\n경로 복사되었습니다.", directoryPath), "알림");
+                        //}
+
+                        Clipboard.SetText(directoryPath);
+                        MessageBox.Show(string.Format("파일 변환이 완료되었습니다.\n저장 경로는 {0}입니다.\n경로 복사되었습니다.", directoryPath), "Audio 파일 변환하기");
                     }
                     else 
                     {
