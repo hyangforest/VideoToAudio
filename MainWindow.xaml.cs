@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Linq;
 using System.Windows.Media;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace VideoToAudio
 {
@@ -148,7 +149,8 @@ namespace VideoToAudio
                 }
                 else 
                 {
-                   
+                    Mouse.OverrideCursor = Cursors.Wait;
+
                     string directoryPath = string.Format("{0}audio\\downloads", cbDrive.SelectedValue.ToString());  // 디렉터리 경로
                     string videoFileName = videoFilePath.Split('\\')[videoFilePath.Split('\\').Length - 1].Split('.')[0]; // 비디오 파일명
                     string outputAudioFilePath = string.Format("{0}audio\\downloads\\{1}_audio_{2}.mp3", cbDrive.SelectedValue, videoFileName, DateTime.Now.ToString("yyyyMMddHHmmss")); // .mp3 파일 경로
@@ -179,6 +181,8 @@ namespace VideoToAudio
                     {
                         MessageBox.Show("파일 변환이 실패하였습니다.", "Audio 파일 변환하기");
                     }
+
+                    Mouse.OverrideCursor = null;
                 }
             }
         }
