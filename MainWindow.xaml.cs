@@ -149,6 +149,7 @@ namespace VideoToAudio
                 }
                 else 
                 {
+                    // 커서 Wait 처리
                     Mouse.OverrideCursor = Cursors.Wait;
 
                     string directoryPath = string.Format("{0}audio\\downloads", cbDrive.SelectedValue.ToString());  // 디렉터리 경로
@@ -182,6 +183,7 @@ namespace VideoToAudio
                         MessageBox.Show("파일 변환이 실패하였습니다.", "Audio 파일 변환하기");
                     }
 
+                    // 커서 원래대로 복원
                     Mouse.OverrideCursor = null;
                 }
             }
