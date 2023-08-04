@@ -14,3 +14,4 @@
 
 # 4. 사용 라이브러리
 - NAudio (2.1.0)
+- 프로그램 아이콘 (https://www.iconfinder.com/)

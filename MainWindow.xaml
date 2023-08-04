@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VideoToAudio"
         mc:Ignorable="d"
-        Title="동영상 오디오 파일 변환" Height="200" Width="420" Icon="/audio.png">
+        Title="동영상 오디오 파일 변환" Height="198" Width="420" Icon="/audio.png">
     <Window.Resources>
         <Style x:Key="GroupBoxHeaderStyle" TargetType="GroupBox">
             <Setter Property="HeaderTemplate">
@@ -56,7 +56,7 @@
                 </Grid.ColumnDefinitions>
                 <Label x:Name="lblDrive" Content="로컬 드라이브 선택 :" Margin="5,0,5,0" Foreground="#FF484848" VerticalAlignment="Center" FontSize="12" />
                 <ComboBox x:Name="cbDrive" Height="20" Width="60" Margin="5,0,5,0" Grid.Column="1" VerticalAlignment="Center" FontSize="12" />
-                <Button x:Name="btnSave" Height="20" Width="160" Content="Audio 파일(.mp3) 변환하기" Grid.Column="2" VerticalAlignment="Center" FontSize="10" Click="btnSave_Click">
+                <Button x:Name="btnSave" Height="20" Width="160" Content="Audio 파일(.mp3) 변환하기" Grid.Column="2" VerticalAlignment="Bottom" FontSize="10" Click="btnSave_Click" Margin="13,0,13,5">
                     <Button.Style>
                         <Style TargetType="{x:Type Button}">
                             <Setter Property="Foreground" Value="White" />
